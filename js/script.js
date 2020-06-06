@@ -8,9 +8,8 @@ project 1 - A Random Quote Generator
   // Reach out in your Slack community - https://treehouse-fsjs-102.slack.com/app_redirect?channel=chit-chat
 
 
-  /*** 
- * `quotes` array 
-***/
+  /* My `quotes` array */
+
 var quotes = [
   {
     quote: 'Every man should stand for himself, or fall with the unworthy.',
@@ -38,13 +37,11 @@ var quotes = [
   }
 ];
 
-console.log(quotes);
+/* console.log(quotes); */
 
 
 
-/***
- * `getRandomQuote` function
-***/
+/* My `getRandomQuote` function */
 
 
 function getRandomQuote() {
@@ -55,19 +52,18 @@ function getRandomQuote() {
 console.log(getRandomQuote());
 */
 
-/***
- * `printQuote` function
-***/
+
+/* My `printQuote` function */
 
 function printQuote() {
   var print = getRandomQuote();
   var hold = '<p class="quote">' + print.quote + '</p>';
   hold += '<p class="source">' + print.source;
   if (print.citation) {
-    hold += '<span class="citation">' + hold.citation + '</span>';
+    hold += '<span class="citation">' + print.citation + '</span>';
   }; 
   if (print.year) {
-    hold += '<span class="year">' + hold.year + '</span>';
+    hold += '<span class="year">' + print.year + '</span>';
   };
   hold += '</p>';
   document.getElementById('quote-box').innerHTML = hold;
